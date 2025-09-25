@@ -1,0 +1,10 @@
+package main
+import "fmt"
+func sumAndDiff(a, b float64) (float64, float64) {//вычисляет сумму и разность двух чисел.
+    return a + b, a – b //возврат двух значений через запятую
+}
+func main() {
+    sum, diff := sumAndDiff(11.1, 66.6) //функция возвращает два значения, которые присваиваются переменным sum и diff
+fmt.Printf("Сумма: %.1f\n", sum) //вывод суммы до одного знака после запятой
+fmt.Printf("Разность: %.1f\n", diff) //разность
+}
