@@ -1,0 +1,12 @@
+package main
+import "fmt"
+func main() {
+	a := 66
+	b := 11
+	fmt.Println("арифметические операции:")
+	fmt.Printf("%d + %d = %d\n", a, b, a+b) //сложение %d - вывода целых чисел 
+	fmt.Printf("%d - %d = %d\n", a, b, a-b) //вычитание
+	fmt.Printf("%d * %d = %d\n", a, b, a*b) //умножение
+	fmt.Printf("%d / %d = %d\n", a, b, a/b) //деление. для целых чисел деление целочисленное (дробная часть отбрасывается) 
+	fmt.Printf("%d %% %d = %d\n", a, b, a%b) //остаток от деления (модуль)
+}
