@@ -1,0 +1,22 @@
+package main
+import "fmt"
+//объявляем функцию, которая принимает одно число и возвращает строку
+func checkNumber(num int) string {
+	//если число больше нуля
+	if num > 0 {
+		return "Positive" //возвращаем "Positive"
+	} else if num < 0 {
+		return "Negative" //если меньше нуля — "Negative"
+	} else {
+		return "Zero" //если равно нулю — "Zero"
+	}
+}
+func main() {
+	//объявление переменной
+	var num int
+	fmt.Print("Введите число: ")
+	fmt.Scan(&num)
+	//вызываем функцию и сохраняем результат
+	result := checkNumber(num)
+	fmt.Println("Результат:", result)
+}
