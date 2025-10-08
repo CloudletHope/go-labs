@@ -1,0 +1,29 @@
+package main
+import (
+	"fmt"      //пакет fmt для вывода данных
+	"unicode/utf8" //пакет для работы с символами Unicode
+)
+//считает длину строки в байтах
+func byteLength(s string) int {
+	//len(s) возвращает количество байт, а не символов
+	return len(s)
+}
+//считает количество символов в строке
+func runeLength(s string) int {
+	//utf8.RuneCountInString(s) возвращает количество символов
+	return utf8.RuneCountInString(s)
+}
+func main() {
+
+	str := "это уже четвертая лаба ляляля"
+
+	//функцию для подсчёта длины строки в байтах
+	bytesCount := byteLength(str)
+	//функцию для подсчёта длины строки в символах 
+	runesCount := runeLength(str)
+	fmt.Println("Строка:", str)
+	//вывод количество байт (len считает именно байты, не буквы)
+	fmt.Println("Длина строки в байтах:", bytesCount)
+	//вывод количество символов, то есть реальных букв
+	fmt.Println("Длина строки в символах:", runesCount)
+}
