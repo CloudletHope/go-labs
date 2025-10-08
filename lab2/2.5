@@ -1,0 +1,27 @@
+package main
+import "fmt" 
+//структуру Rectangle (Прямоугольник)
+type Rectangle struct {
+	width  float64 //ширина (float64 дробные числа)
+	height float64 //высота
+}
+//метод Area() для структуры Rectangle
+func (r Rectangle) Area() float64 {
+	//возвращение произведение ширины и высоты(формула площади прямоугольника)
+	return r.width * r.height
+}
+func main() {
+	//хранения введённых пользователем значений
+	var w, h float64
+	fmt.Print("Введите ширину прямоугольника: ")
+	fmt.Scan(&w)
+	fmt.Print("Введите высоту прямоугольника: ")
+	fmt.Scan(&h)
+	//объект rect типа Rectangle и присваиваем введённые значения
+	rect := Rectangle{width: w, height: h}
+	//метод Area() для объекта rect
+	area := rect.Area()
+	fmt.Println("Ширина прямоугольника:", rect.width)
+	fmt.Println("Высота прямоугольника:", rect.height)
+	fmt.Println("Площадь прямоугольника:", area)
+}
