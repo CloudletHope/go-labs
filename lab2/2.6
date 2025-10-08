@@ -1,0 +1,18 @@
+package main
+import "fmt"
+//функця, которая принимает два целых числа
+func average(a, b int) float64 {
+	//складываем два числа, преобразуем результат в float64 и делим на 2
+	return float64(a+b) / 2
+}
+func main() {
+	//две переменные
+	var a, b int
+	fmt.Print("Введите первое число: ")
+	fmt.Scan(&a)
+	fmt.Print("Введите второе число: ")
+	fmt.Scan(&b)
+	//сохраняем результат
+	result := average(a, b)
+	fmt.Printf("Среднее значение чисел %d и %d равно %.2f\n", a, b, result)
+}
